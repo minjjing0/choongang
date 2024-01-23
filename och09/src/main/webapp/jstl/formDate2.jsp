@@ -12,18 +12,11 @@
 </head>
 <c:set var="date" value="<%=new Date() %>"></c:set>
 <body>
-서울: <fmt:formatDate value="${date}" type="both" /> <br>
+	<h2>현재 날자와 시간</h2>
+	<fmt:formatDate value="${date }" type="both" dateStyle="short"  timeStyle="short" /><br>
+	<fmt:formatDate value="${date }" type="both" dateStyle="medium" timeStyle="medium" /><br>
+	<fmt:formatDate value="${date }" type="both" dateStyle="long"   timeStyle="long" /><br>
+	<fmt:formatDate value="${date }" type="both" dateStyle="full"   timeStyle="full" />
 
-<fmt:timeZone value="Asia/Hong_Kong">
-홍콩: <fmt:formatDate value="${date}" type="both" /><br>
-</fmt:timeZone>
-
-<fmt:timeZone value="Europe/London" >
-	런던: <fmt:formatDate value="${date}" type="both" /><br>
-</fmt:timeZone>
-
-<fmt:timeZone value="America/New_York">
-	뉴욕: <fmt:formatDate value="${date}" type="both" /><br>
-</fmt:timeZone>
 </body>
 </html>

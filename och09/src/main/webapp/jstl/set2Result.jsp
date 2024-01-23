@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>상품정보</h2>
-코드 : ${ code}<p>
-이름 : ${ name}<p>
-가격 : ${ price}
+	<h2>상품정보</h2>
+	코드 : ${code }<p>
+	이름 : ${name }<p>
+	가격 : ${price }
 </body>
 </html>
