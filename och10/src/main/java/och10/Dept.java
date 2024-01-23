@@ -1,11 +1,11 @@
 package och10;
 
-//DTO --> Data 전달하는 객체 단위 ( 일반적 Table 단위) 
-// 자바에서만 쓰면 DTO , HTML 과 자바 연결해서 쓰면 자바빈즈라고 한다.  
+//DTO --> Data 전달하는 객체 단위(일반적 Table단위)
 public class Dept {
 	private int deptno;
 	private String dname;
 	private String loc;
+
 	public int getDeptno() {
 		return deptno;
 	}
@@ -24,6 +24,7 @@ public class Dept {
 	public void setLoc(String loc) {
 		this.loc = loc;
 	}
+	
 	
 	
 }
