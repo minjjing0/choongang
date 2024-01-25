@@ -28,7 +28,7 @@
 			<tr>
 				<td>아이디</td>
 				<td><%=id%><input type="hidden"  class="id"  name="id"  id="id"
-					value="<%=member.getId()%> "></td>
+					value="<%=member.getId()%>"></td>
 			</tr>
 			<tr>
 				<td>암호</td>
@@ -37,7 +37,7 @@
 			<tr>
 				<td>이름</td>
 				<td><input type="text" name="name" required="required"
-					value="<%=member.getName()%> "></td>
+					value="<%=member.getName()%>"></td>
 			</tr>
 			<tr>
 				<td>주소</td>

@@ -176,6 +176,36 @@ public class MemberDao {
 		return member;
 	}
 
+	public int update(Member2 member) throws SQLException {
+		int result = 0;  				
+		Connection conn = null;
+		System.out.println("getId->"+member.getId());
+		System.out.println("getName->"+member.getName());
+		System.out.println("getAddress->"+member.getAddress());
+		System.out.println("getTel->"+member.getTel());
+		String sql = "update member2 set passwd=?,name=?,address=?, tel=? "
+				   + "where id=?"; 
+		System.out.println("sql->"+sql);
+		PreparedStatement pstmt = null; 
+		try { 
+			conn  = getConnection();
+			pstmt = conn.prepareStatement(sql);			
+			pstmt.setString(1, member.getPasswd());
+			pstmt.setString(2, member.getName());
+			pstmt.setString(3, member.getAddress());
+			pstmt.setString(4, member.getTel());
+			pstmt.setString(5, member.getId());
+			result = pstmt.executeUpdate();
+			System.out.println("result->"+result);
+		} catch(Exception e) { 
+			System.out.println(e.getMessage());
+		} finally {
+			if (pstmt != null) pstmt.close();
+			if (conn != null) conn.close();
+		}
+		return result;
+	}
+	
 	public int delete(String id, String passwd) throws SQLException {
 		int result  = 0;  				
 		Connection conn = null;
